@@ -61,7 +61,7 @@ def main():
                     nFrame *= nZoomInterval
                     corner = 0.5 - nFrame/2.0
                     camera.zoom = (corner,corner,nFrame,nFrame)
-                    time.sleep(0.01)
+                    #time.sleep(0.01)
         #zoom in
         elif GPIO.event_detected(12):
             while GPIO.input(12) == GPIO.LOW:
@@ -69,7 +69,7 @@ def main():
                     nFrame /= nZoomInterval
                     corner = 0.5 - nFrame/2.0            
                     camera.zoom = (corner,corner,nFrame,nFrame)
-                    time.sleep(0.003)
+                    #time.sleep(0.003)
                     print(nFrame)
         
 main()
