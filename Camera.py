@@ -44,7 +44,7 @@ def main():
             if bRecording:
                 bRecording = False
                 camera.stop_recording()
-				return()
+                return()
             else:
                 bRecording = True
                 strDateTime = datetime.now().strftime('%Y-%m-%d-%H-%M-%S-')
