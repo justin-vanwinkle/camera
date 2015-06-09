@@ -44,6 +44,7 @@ def main():
             if bRecording:
                 bRecording = False
                 camera.stop_recording()
+				return()
             else:
                 bRecording = True
                 strDateTime = datetime.now().strftime('%Y-%m-%d-%H-%M-%S-')
@@ -60,7 +61,7 @@ def main():
                     nFrame *= nZoomInterval
                     corner = 0.5 - nFrame/2.0
                     camera.zoom = (corner,corner,nFrame,nFrame)
-                    time.sleep(0.03)
+                    time.sleep(0.01)
         #zoom in
         elif GPIO.event_detected(12):
             while GPIO.input(12) == GPIO.LOW:
